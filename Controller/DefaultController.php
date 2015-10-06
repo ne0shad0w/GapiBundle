@@ -13,7 +13,7 @@ class DefaultController extends Controller
     {
 		if ( $this->container->hasParameter('gapi_user') && $this->container->hasParameter('gapi') && $this->container->hasParameter('gapi_file')){
 			$user = $this->container->getParameter('gapi_user') ;
-			$ga = new \GapiBundle\Pclass\gapi($user,$this->get('kernel')->locateResource('@GapiBundle/Pclass/'.$this->container->getParameter('gapi_file')));
+			$ga = new \ne0shad0w\GapiBundle\GapiBundle\Pclass\gapi($user,$this->get('kernel')->locateResource('@GapiBundle/Pclass/'.$this->container->getParameter('gapi_file')));
 			return $this->render('GapiBundle:Default:dashboard.html.php', array('user'=>$user,'token' => $ga->getToken(), 'ga_ids'=>$this->container->getParameter('gapi')  ));
 		} else {
 			return $this->render('GapiBundle:Default:vide.html.twig');
