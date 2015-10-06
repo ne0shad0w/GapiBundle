@@ -1,0 +1,17 @@
+{
+    "name": "ne0shad0w/zephyr-gapi-bundle",
+    "description": "Bundle pour afficher les statistiques de google analytique",
+    "authors": [
+        {
+            "name": "Steve Gaudreault"
+        }
+    ],
+    "require": {
+        "ne0shad0w/zephyr-admincore-bundle": "master"
+    },
+     "autoload": {
+          "psr-4": {
+              "ne0shad0w\\GapiBundle\\GapiBundle\\" : ""
+		  }
+	 }
+}
